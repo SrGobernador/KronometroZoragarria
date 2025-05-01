@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Erloju-sistema osoa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Segunduen Kronometroa</h1>
+    <div id="segKrono">0</div>
+    <button onclick="hasiSegKrono()">Hasi</button>
+    <button onclick="geldituSegKrono()">Gelditu</button>
+    <button onclick="berrezarriSegKrono()">Berrezarri</button>
+
+    <h1>Kronometro luzea</h1>
+    <div id="kronoluzea">0d 00:00:00</div>
+    <button onclick="hasiKronoLuzea()">Hasi</button>
+    <button onclick="geldituKronoLuzea()">Gelditu</button>
+    <button onclick="berrezarriKronoLuzea()">Berrezarri</button>
+
+    <h1>Atzerako kontaketa (segunduak)</h1>
+    <input type="number" id="atzeraSegInput" placeholder="Segunduak">
+    <div id="atzeraSeg">00</div>
+    <button onclick="hasiAtzeraSeg()">Hasi</button>
+    <button onclick="geldituAtzeraSeg()">Gelditu</button>
+    <button onclick="berrezarriAtzeraSeg()">Berrezarri</button>
+
+    <h1>Atzerako kontaketa (ordu/minutu/segunduak)</h1>
+    <input type="number" id="ordu" placeholder="Orduak">
+    <input type="number" id="minutu" placeholder="Minutuak">
+    <input type="number" id="segundu" placeholder="Segunduak">
+    <div id="atzeraHMS">00:00:00</div>
+    <label for="abestia">Aukeratu abestia:</label>
+    <select id="abestia">
+        <option value="" data-duration="0">-- Aukeratu abesti bat --</option>
+        <option value="audio/Victory.mp3" data-duration="317">Victory (5:17)</option>
+        <option value="audio/Tictac-PopRock.mp3" data-duration="183">Tictac - Pop Rock (3:03)</option>
+        <option value="audio/Tictac-Pop.mp3" data-duration="172">Tictac - Pop (2:52)</option>
+        <option value="audio/Tictac-RockTecno.mp3" data-duration="146">Tictac - Rock Tecno (2:26)</option>
+        <option value="audio/Tictac-Rock.mp3" data-duration="177">Tictac - Rock (2:57)</option>
+    </select>
+    <br><br>
+    <button onclick="hasiAtzeraHMS()">Hasi</button>
+    <button onclick="geldituAtzeraHMS()">Gelditu</button>
+    <button onclick="berrezarriAtzeraHMS()">Berrezarri</button>
+
+    <audio id="audioPlayer" style="display:none;"></audio>
+    <audio id="timbreAudio" src="audio/TIMBREA.mp3" preload="auto"></audio>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const timbreAudio = document.getElementById('timbreAudio');
+
+        // Abestia amaitzean TIMBREA.mp3 jo
+        audioPlayer.addEventListener('ended', () => {
+            timbreAudio.play();
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
