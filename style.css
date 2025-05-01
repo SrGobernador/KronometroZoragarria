@@ -1,0 +1,135 @@
+/* 🌐 Oinarrizko estiloak */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  background-image: url('./audio/la-persistencia-de-dali.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+ }
+
+ /* 🏷️ Titulua */
+ h1 {
+  color: white;
+  margin-top: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+ }
+
+ /* 📦 Eduki orokorra */
+ div {
+  font-size: 40px;
+  margin: 15px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+ }
+
+ /* 🔘 Botoiak */
+ button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+ }
+
+ /* 🔢 Input-ak */
+ input {
+  margin: 5px;
+  width: 80px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ /* 🖥️ Pantaila handientzako egokitzapena */
+ @media (min-width: 768px) {
+  body {
+   padding: 20px;
+  }
+ }
+
+ /* Estilos para la cuenta atrás de segundos */
+ .atzera-normal {
+  color: white;
+  font-size: 40px;
+ }
+
+ .atzera-hamar {
+  color: yellow;
+  font-size: 40px;
+ }
+
+ .atzera-bost {
+  color: orange;
+  font-size: 45px;
+  animation: shake-suave 0.5s infinite;
+ }
+
+ .atzera-hiru {
+  color: red;
+  font-size: 55px;
+  animation: shake 0.3s infinite;
+ }
+
+ .atzera-zero {
+  color: darkred;
+  font-size: 60px;
+  animation: none;
+ }
+
+ /* Estilos para la cuenta atrás HMS */
+ .atzera-hms-normal {
+  color: white;
+  font-size: 40px;
+ }
+
+ .atzera-hms-hamar {
+  color: yellow;
+  font-size: 40px;
+ }
+
+ .atzera-hms-bost {
+  color: orange;
+  font-size: 45px;
+  animation: shake-suave 0.5s infinite;
+ }
+
+ .atzera-hms-hiru {
+  color: red;
+  font-size: 55px;
+  animation: shake 0.3s infinite;
+ }
+
+ .atzera-hms-zero {
+  color: darkred;
+  font-size: 60px;
+  animation: none;
+ }
+
+ /* 🎬 Dardara animazioa suave */
+ @keyframes shake-suave {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(2px); }
+ }
+
+ /* 🎬 Dardara animazioa intensa */
+ @keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+ }
